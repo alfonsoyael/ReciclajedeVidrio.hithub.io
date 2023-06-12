@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyecto Aula</title>    
+        <style type="text/css">
+
+
+            #marquee-container {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            #marquee-content {
+                display: inline-flex;
+                animation: scroll 10s linear infinite;
+            }
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                50% { transform: translateX(-40%); }
+            }
+
+            #marquee-container {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            #marquee-content {
+                color: green;
+                display: inline-flex;
+                animation: scroll 5s linear infinite;
+            }
+
+            #marquee-content::after {
+                content: attr(data-text);
+            }
+            /* Add your CSS styles here */
+            marquee img {
+                display: inline-block;
+            }
+            body {
+
+                background-size: cover;
+                color: #40a0D0;
+                background-attachment: fixed;
+                overflow-y: auto;
+                cursor: url('img/batman-logo.png'), auto;
+                height: 100%;
+
+            }
+            button:focus{
+                cursor: url('img/batman-logo.png'), auto;
+            }
+            button:hover{
+                cursor: url('img/batman-logo.png'), auto;
+            }
+            #div1{
+                background-color: red;
+                width: 100%;
+
+
+            }
+            #div2 {
+                width: 80%;
+                height: 800px;
+                float: left;
+
+            }
+            #div3 {
+
+                width: 19%;
+                background-color: transparent;
+                float: right;
+
+            }
+
+            h1 {
+                color: #0077be;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            p{
+                text-align: center;
+            }
+
+
+            img {
+                display: block;
+                margin: auto;
+                width: 100%;
+                height: 120px;
+                object-fit: cover;
+            }
+            video {
+                position: fixed;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+                max-width:  100%;
+                z-index: -1;
+
+            }
+            iframe{
+                border: none;
+            }
+            iframe:hover{
+                cursor: url('img/batman-logo.png'), auto;
+            }
+            .button {
+                display: inline-block;
+                background-color: white; /* Gris */
+                padding: 5px 99px;
+                font-size: 20px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 6px #999;
+                opacity: 0.7;
+                margin-bottom: 30px;
+                width: 360px; /* Ancho fijo */
+            }
+            .button1 { 
+                background-color:transparent; 
+                border:2px solid #555555; 
+                border-radius: 22%;
+            } 
+            .button1:hover { 
+                background-color:#555555; 
+                color:white; 
+                marquee {
+                    font-size36px
+                    color#FFD700
+                }
+            }
+        </style>
+    </head>
+    <body style="height: 100%">
+        <div id="div1">
+            <div id="div2">
+                <iframe id="paginas1" src="pagina1.html" style="width: 100%; height: 260%"></iframe>
+
+
+            </div>
+            <div id="div3">
+                <button class="button button1" onclick="pagina1()">EL VIDRIO</button>
+                <button class="button button1" onclick="pagina2()">PROYECTO AULA</button>
+                <button class="button button1" onclick="pagina3()">MINECRAFT</button>
+                <button class="button button1" onclick="pagina4()">CONCLUCIONES</button>
+                <div id="marquee-container">
+                    <a href="https://www.youtube.com/watch?v=m6mv0BGwjwE" id="marquee-content" data-text="¡¡Recicla el vidrio para un futuro más verde!!">
+                        ¡¡Recicla el vidrio para un futuro más verde!!
+                    </a>
+                </div>
+                <div id="marquee-container">
+                    <a href="https://www.youtube.com/watch?v=m6mv0BGwjwE" id="marquee-content">
+                        <img src="img/maxresdefault.jpg">
+                        <img src="img/2018051316543634345.jpg">
+                        <img src="img/images (1).jpeg">
+                        <img src="img/descarga.jpeg">
+                        <img src="img/images.jpeg">
+                    </a>
+                </div>
+                <div id="marquee-container">
+                    <a href="https://www.youtube.com/watch?v=m6mv0BGwjwE" id="marquee-content" data-text="¡¡Recicla el vidrio para un futuro más verde!!">
+                        ¡¡Recicla el vidrio para un futuro más verde!!
+                    </a>
+                </div>
+            </div>
+        </div>
+        <video src="img/2pexels-pressmaster-3129957-3840x2160-25fps (1).mp4" autoplay muted loop poster="img/4K Video _ Car and City in Neon Style _ No Copyright VJ Loop Background Video (1080p).mp4">
+        </video>
+        <script>
+            var iframe = document.querySelector('#paginas1');
+            function pagina1() {
+                iframe.src = "pagina1.html";
+            }
+            function pagina2() {
+                iframe.src = "PROYECTO AULA.HTML";
+            }
+            function pagina3() {
+                iframe.src = "minecraft.html";
+            }
+            function pagina4() {
+                iframe.src = "concluciones.html";
+            }
+            function agrandarBarraDesplazamiento() {
+                document.body.style.scrollbarWidth = "large";
+            }
+            var botones = document.querySelectorAll(".button1");
+            for (var i = 0; i < botones.length; i++) {
+                botones[i].addEventListener("click", agrandarBarraDesplazamiento);
+            }
+
+            var vid = document.getElementById("totis");
+            vid.volume = 0.4;
+            vid.play
+
+        </script>
+    </body>
+</html>
